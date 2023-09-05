@@ -19,7 +19,7 @@ class ListItems extends StatelessWidget {
           Radius.circular(8),
         ),
       ),
-      child: Column( 
+      child: Column(
         children: [
           Row(
             children: [
@@ -32,14 +32,21 @@ class ListItems extends StatelessWidget {
                 children: [
                   Text(
                     'WhatsApp',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Color(0xff212121),
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Outfit",
+                        fontStyle: FontStyle.normal,
+                        fontSize: 8.0),
                   ),
                   Text(
-                    '25Mb',
+                    '25Mbss',
                     style: TextStyle(
-                      fontSize: 13,
-                    ),
-                    
+                        color: Color(0xffffffff),
+                        fontWeight: FontWeight.w300,
+                        //fontFamily: "Outfit",
+                        fontStyle: FontStyle.normal,
+                        fontSize: 7.0),
                   ),
                 ],
               ),

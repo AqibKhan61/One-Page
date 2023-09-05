@@ -24,27 +24,39 @@ class BottomBar extends StatelessWidget {
             children: [
               Text(
                 '12 Files Selected!',
-                style: TextStyle(fontWeight: FontWeight.bold,),
-                
+                style: TextStyle(
+                  color: Color(0xff212121),
+                  fontWeight: FontWeight.w400,
+                  fontFamily: "Outfit",
+                  fontStyle: FontStyle.normal,
+                  fontSize: 12.0,
+                ),
               ),
               Text(
                 'Total Media 2.84Mb',
-                style: TextStyle(fontSize: 10,color: Colors.blueGrey),
+                style: TextStyle(
+                    color: Color(0xff797979),
+                    fontWeight: FontWeight.w300,
+                    fontFamily: "Outfit",
+                    fontStyle: FontStyle.normal,
+                    fontSize: 11.0),
               )
             ],
           ),
           const SizedBox(
             width: 50,
           ),
-          const SizedBox(width: 20,),
+          const SizedBox(
+            width: 50,
+          ),
           Container(
-             height: 150,
-             width: 130,
+            width: 118,
+            height: 50,
             padding: const EdgeInsets.only(
-              left: 12,
+              left: 18,
               top: 7,
               right: 3,
-              bottom: 7,
+              bottom: 5,
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
@@ -55,7 +67,11 @@ class BottomBar extends StatelessWidget {
                 const Text(
                   'Send Now',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.blue),
+                      color: Color(0xff4062f5),
+                      fontWeight: FontWeight.w500,
+                      fontFamily: "Outfit",
+                      fontStyle: FontStyle.normal,
+                      fontSize: 12.0),
                 ),
                 const SizedBox(
                   width: 10,

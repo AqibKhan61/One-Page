@@ -4,17 +4,17 @@ import 'package:onepage/widgets/bottombar.dart';
 import 'package:onepage/widgets/singlelist.dart';
 
 class HomeScreen extends StatelessWidget {
-   HomeScreen({super.key});
-   List<item> items=[
-    item("assets/mask_group_24.png", "iman"),
-    item("assets/mask_group_24.png", "iman"),
-    item("assets/mask_group_24.png", "iman"),
-    item("assets/mask_group_24.png", "iman"),
-    item("assets/mask_group_24.png", "iman"),
-    item("assets/mask_group_24.png", "iman"),
-   ];
+  HomeScreen({super.key});
+  List<item> items = [
+    item("assets/mask_group_24.png", "App"),
+    item("assets/mask_group_24.png", "Images"),
+    item("assets/mask_group_24.png", "videos"),
+    item("assets/mask_group_24.png", "Files"),
+    item("assets/mask_group_24.png", "Imran"),
+    item("assets/mask_group_24.png", "Imran"),
+  ];
 
-   List<list> lists=[
+  List<list> lists = [
     list('assets/whatsapp.png', 'WhatsApp', '25 Mbs'),
     list('assets/group_1482.png', 'Behance', '35 Mbs'),
     list('assets/whatsapp.png', 'LinkedIn', '65 Mbs'),
@@ -22,9 +22,8 @@ class HomeScreen extends StatelessWidget {
     list('assets/whatsapp.png', 'Spotify', '45 Mbs'),
     list('assets/group_1482.png', 'Instagram', '25 Mbs'),
     list('assets/whatsapp.png', 'FaceBook', '85 Mbs'),
+  ];
 
-   ];
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,13 +38,20 @@ class HomeScreen extends StatelessWidget {
           children: [
             const Row(
               children: [
-                Icon(Icons.arrow_back,),
+                Icon(
+                  Icons.arrow_back,
+                ),
                 SizedBox(
                   width: 5,
                 ),
                 Text(
                   'Media Ready to Transfer',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  style: TextStyle(
+                      color: Color(0xff212121),
+                      fontWeight: FontWeight.w500,
+                      fontFamily: "Outfit",
+                      fontStyle: FontStyle.normal,
+                      fontSize: 17.0),
                 ),
               ],
             ),
@@ -66,75 +72,80 @@ class HomeScreen extends StatelessWidget {
             // ),
             Expanded(
               child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: items.length,
-                itemBuilder: (context,index){return Box(text: items[index].text, image:items[index].img);}),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    return Box(
+                        text: items[index].text, image: items[index].img);
+                  }),
             ),
             const SizedBox(
               height: 30,
             ),
             Container(
-              constraints: const BoxConstraints(maxHeight: 430),
-              padding: const EdgeInsets.only(
-               // top: 0.5,
-                right: 7,
-                left: 7,
-              ),
-              // margin: const EdgeInsets.only(
-              //   top: 8,
-              // ),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(8),
+                constraints: const BoxConstraints(maxHeight: 430),
+                padding: const EdgeInsets.only(
+                  // top: 0.5,
+                  right: 7,
+                  left: 7,
                 ),
-              ),
-              child: ListView.builder(
-                itemCount: lists.length,
-
-                itemBuilder: (contex,index){
-                  return ListItem(img: lists[index].imagee, title: lists[index].Title, mbs: lists[index].Mbss);
-              })
-              // SingleChildScrollView(
-              //   child: Column(
-              //     children: [
-              //       ListItem(
-              //           img: 'assets/whatsapp.png',
-              //           title: 'WhatsApp',
-              //           mbs: '25 Mbs'),
-              //       ListItem(
-              //           img: 'assets/group_1482.png',
-              //           title: 'Behance',
-              //           mbs: '25 Mbs'),
-              //       ListItem(
-              //         img: 'assets/whatsapp.png',
-              //         title: 'LinkedIn',
-              //         mbs: '30 Mbs',
-              //       ),
-              //       ListItem(
-              //         img: 'assets/whatsapp.png',
-              //         title: 'SnapChat',
-              //         mbs: '35 Mbs',
-              //       ),
-              //       ListItem(
-              //         img: 'assets/group_1482.png',
-              //         title: 'Spotify',
-              //         mbs: '40 Mbs',
-              //       ),
-              //       ListItem(
-              //         img: 'assets/whatsapp.png',
-              //         title: 'Instagram',
-              //         mbs: '45 Mbs',
-              //       ),
-              //       ListItem(
-              //         img: 'assets/group_1482.png',
-              //         title: 'Facebook',
-              //         mbs: '50 Mbs',
-              //       ),
-              //     ],
-              //   ),
-              // ),
-            ),
+                // margin: const EdgeInsets.only(
+                //   top: 8,
+                // ),
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(8),
+                  ),
+                ),
+                child: ListView.builder(
+                    itemCount: lists.length,
+                    itemBuilder: (contex, index) {
+                      return ListItem(
+                          img: lists[index].imagee,
+                          title: lists[index].Title,
+                          mbs: lists[index].Mbss);
+                    })
+                // SingleChildScrollView(
+                //   child: Column(
+                //     children: [
+                //       ListItem(
+                //           img: 'assets/whatsapp.png',
+                //           title: 'WhatsApp',
+                //           mbs: '25 Mbs'),
+                //       ListItem(
+                //           img: 'assets/group_1482.png',
+                //           title: 'Behance',
+                //           mbs: '25 Mbs'),
+                //       ListItem(
+                //         img: 'assets/whatsapp.png',
+                //         title: 'LinkedIn',
+                //         mbs: '30 Mbs',
+                //       ),
+                //       ListItem(
+                //         img: 'assets/whatsapp.png',
+                //         title: 'SnapChat',
+                //         mbs: '35 Mbs',
+                //       ),
+                //       ListItem(
+                //         img: 'assets/group_1482.png',
+                //         title: 'Spotify',
+                //         mbs: '40 Mbs',
+                //       ),
+                //       ListItem(
+                //         img: 'assets/whatsapp.png',
+                //         title: 'Instagram',
+                //         mbs: '45 Mbs',
+                //       ),
+                //       ListItem(
+                //         img: 'assets/group_1482.png',
+                //         title: 'Facebook',
+                //         mbs: '50 Mbs',
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                ),
             const SizedBox(
               height: 50,
             ),
@@ -145,15 +156,16 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-class item{
- final  String img;
- final String text;
- item(this.img,this.text);
+
+class item {
+  final String img;
+  final String text;
+  item(this.img, this.text);
 }
 
-class list{
+class list {
   final String imagee;
   final String Title;
   final String Mbss;
-  list(this.imagee,this.Title,this.Mbss);
+  list(this.imagee, this.Title, this.Mbss);
 }

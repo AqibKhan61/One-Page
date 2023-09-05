@@ -22,13 +22,21 @@ class ListItem extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      color: Color(0xff212121),
+                      fontWeight: FontWeight.w400,
+                      fontFamily: "Outfit",
+                      fontStyle: FontStyle.normal,
+                      fontSize: 15.0),
                 ),
                 Text(
                   mbs,
                   style: const TextStyle(
-                    fontSize: 13,
-                  ),
+                      color:Color(0xff797979),
+                      fontWeight: FontWeight.w300,
+                      fontFamily: "Outfit",
+                      fontStyle: FontStyle.normal,
+                      fontSize: 13.0),
                 ),
               ],
             ),
