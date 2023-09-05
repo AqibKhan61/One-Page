@@ -27,133 +27,140 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(211, 213, 241, 255),
-      body: Padding(
-        padding: const EdgeInsets.only(
-          top: 32.5,
-          left: 26,
-          right: 26,
-        ),
-        child: Column(
-          children: [
-            const Row(
+      //backgroundColor: const Color.fromARGB(211, 213, 241, 255),
+      
+      body: Stack(
+        children: [
+          Positioned.fill(child: Image.asset('assets/mask_group_12.png',fit: BoxFit.cover,),),
+          Padding(
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height*0.06,         
+            left: MediaQuery.of(context).size.width*0.06,
+            right: MediaQuery.of(context).size.width*0.06,
+          ),
+          child: Column(
               children: [
-                Icon(
-                  Icons.arrow_back,
+                 Row(
+                  children: [
+                    const Icon(
+                      Icons.arrow_back,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width*0.04,
+                    ),
+                    const Text(
+                      'Media Ready to Transfer',
+                      style: TextStyle(
+                          color: Color(0xff212121),
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Outfit",
+                          fontStyle: FontStyle.normal,
+                          fontSize: 17.0),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  width: 5,
+                 SizedBox(
+                  height: MediaQuery.of(context).size.height*0.04,
                 ),
-                Text(
-                  'Media Ready to Transfer',
-                  style: TextStyle(
-                      color: Color(0xff212121),
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Outfit",
-                      fontStyle: FontStyle.normal,
-                      fontSize: 17.0),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            // SingleChildScrollView(
-            //   scrollDirection: Axis.horizontal,
-            //   child: Row(
-            //     children: [
-            //       Box(image: 'assets/mask_group_28.png', text: 'APP'),
-            //       Box(text: 'Imageskhjvhjggu', image: 'assets/mask_group_24.png'),
-            //       Box(text: 'Videoojhuhuhus', image: 'assets/mask_group_24.png'),
-            //       Box(text: 'Video', image: 'assets/mask_group_24.png'),
-            //       Box(text: 'Images', image: 'assets/mask_group_24.png'),
-            //     ],
-            //   ),
-            // ),
-            Expanded(
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: items.length,
-                  itemBuilder: (context, index) {
-                    return Box(
-                        text: items[index].text, image: items[index].img);
-                  }),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Container(
-                constraints: const BoxConstraints(maxHeight: 430),
-                padding: const EdgeInsets.only(
-                  // top: 0.5,
-                  right: 7,
-                  left: 7,
-                ),
-                // margin: const EdgeInsets.only(
-                //   top: 8,
-                // ),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(8),
-                  ),
-                ),
-                child: ListView.builder(
-                    itemCount: lists.length,
-                    itemBuilder: (contex, index) {
-                      return ListItem(
-                          img: lists[index].imagee,
-                          title: lists[index].Title,
-                          mbs: lists[index].Mbss);
-                    })
                 // SingleChildScrollView(
-                //   child: Column(
+                //   scrollDirection: Axis.horizontal,
+                //   child: Row(
                 //     children: [
-                //       ListItem(
-                //           img: 'assets/whatsapp.png',
-                //           title: 'WhatsApp',
-                //           mbs: '25 Mbs'),
-                //       ListItem(
-                //           img: 'assets/group_1482.png',
-                //           title: 'Behance',
-                //           mbs: '25 Mbs'),
-                //       ListItem(
-                //         img: 'assets/whatsapp.png',
-                //         title: 'LinkedIn',
-                //         mbs: '30 Mbs',
-                //       ),
-                //       ListItem(
-                //         img: 'assets/whatsapp.png',
-                //         title: 'SnapChat',
-                //         mbs: '35 Mbs',
-                //       ),
-                //       ListItem(
-                //         img: 'assets/group_1482.png',
-                //         title: 'Spotify',
-                //         mbs: '40 Mbs',
-                //       ),
-                //       ListItem(
-                //         img: 'assets/whatsapp.png',
-                //         title: 'Instagram',
-                //         mbs: '45 Mbs',
-                //       ),
-                //       ListItem(
-                //         img: 'assets/group_1482.png',
-                //         title: 'Facebook',
-                //         mbs: '50 Mbs',
-                //       ),
+                //       Box(image: 'assets/mask_group_28.png', text: 'APP'),
+                //       Box(text: 'Imageskhjvhjggu', image: 'assets/mask_group_24.png'),
+                //       Box(text: 'Videoojhuhuhus', image: 'assets/mask_group_24.png'),
+                //       Box(text: 'Video', image: 'assets/mask_group_24.png'),
+                //       Box(text: 'Images', image: 'assets/mask_group_24.png'),
                 //     ],
                 //   ),
                 // ),
+                Expanded(
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: items.length,
+                      itemBuilder: (context, index) {
+                        return Box(
+                            text: items[index].text, image: items[index].img);
+                      }),
                 ),
-            const SizedBox(
-              height: 50,
+                 SizedBox(
+                  height: MediaQuery.of(context).size.height*0.05,
+                ),
+                Container(
+                    constraints:  BoxConstraints(maxHeight: MediaQuery.of(context).size.height*0.6),
+                    padding:  EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height*0.01,
+                      right: MediaQuery.of(context).size.width*0.02,
+                      left: MediaQuery.of(context).size.width*0.03,
+                    ),
+                    // margin: const EdgeInsets.only(
+                    //   top: 8,
+                    // ),
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(8),
+                      ),
+                    ),
+                    child: ListView.builder(
+                        itemCount: lists.length,
+                        itemBuilder: (contex, index) {
+                          return ListItem(
+                              img: lists[index].imagee,
+                              title: lists[index].Title,
+                              mbs: lists[index].Mbss);
+                        })
+                    // SingleChildScrollView(
+                    //   child: Column(
+                    //     children: [
+                    //       ListItem(
+                    //           img: 'assets/whatsapp.png',
+                    //           title: 'WhatsApp',
+                    //           mbs: '25 Mbs'),
+                    //       ListItem(
+                    //           img: 'assets/group_1482.png',
+                    //           title: 'Behance',
+                    //           mbs: '25 Mbs'),
+                    //       ListItem(
+                    //         img: 'assets/whatsapp.png',
+                    //         title: 'LinkedIn',
+                    //         mbs: '30 Mbs',
+                    //       ),
+                    //       ListItem(
+                    //         img: 'assets/whatsapp.png',
+                    //         title: 'SnapChat',
+                    //         mbs: '35 Mbs',
+                    //       ),
+                    //       ListItem(
+                    //         img: 'assets/group_1482.png',
+                    //         title: 'Spotify',
+                    //         mbs: '40 Mbs',
+                    //       ),
+                    //       ListItem(
+                    //         img: 'assets/whatsapp.png',
+                    //         title: 'Instagram',
+                    //         mbs: '45 Mbs',
+                    //       ),
+                    //       ListItem(
+                    //         img: 'assets/group_1482.png',
+                    //         title: 'Facebook',
+                    //         mbs: '50 Mbs',
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+                    ),
+                 SizedBox(
+                  height: MediaQuery.of(context).size.height*0.06,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: const BottomBar(),
-    );
+          ),
+      ]),
+        bottomNavigationBar: const BottomBar(),
+      );
+      
+  
   }
 }
 

@@ -6,12 +6,12 @@ class BottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 75,
-      padding: const EdgeInsets.only(
-        top: 17,
-        bottom: 15,
-        left: 20,
-        right: 15,
+      height: MediaQuery.of(context).size.height*0.10,
+      padding: EdgeInsets.only(
+        top: MediaQuery.of(context).size.height*0.02,
+        bottom: MediaQuery.of(context).size.height*0.03,
+         left: MediaQuery.of(context).size.width*0.05,
+        // right: MediaQuery.of(context).size.width*0.05,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -19,45 +19,53 @@ class BottomBar extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '12 Files Selected!',
-                style: TextStyle(
-                  color: Color(0xff212121),
-                  fontWeight: FontWeight.w400,
-                  fontFamily: "Outfit",
-                  fontStyle: FontStyle.normal,
-                  fontSize: 12.0,
-                ),
-              ),
-              Text(
-                'Total Media 2.84Mb',
-                style: TextStyle(
-                    color: Color(0xff797979),
-                    fontWeight: FontWeight.w300,
-                    fontFamily: "Outfit",
-                    fontStyle: FontStyle.normal,
-                    fontSize: 11.0),
-              )
-            ],
-          ),
-          const SizedBox(
-            width: 50,
-          ),
-          const SizedBox(
-            width: 50,
-          ),
+           Padding(
+             padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.height*0.001),
+             child: Padding(
+               padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.001,bottom:MediaQuery.of(context).size.height*0.001 ),
+               child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                   Text(
+                    '12 Files Selected!',
+                    style: TextStyle(
+                      color: Color(0xff212121),
+                      fontWeight: FontWeight.w400,
+                      fontFamily: "Outfit",
+                      fontStyle: FontStyle.normal,
+                      fontSize: 11.0,
+                    ),
+                  ),
+                  //SizedBox(height: MediaQuery.of(context).size.height*0.001,),
+                  Text(
+                    'Total Media 2.84Mb',
+                    style: TextStyle(
+                        color: Color(0xff797979),
+                        fontWeight: FontWeight.w300,
+                        fontFamily: "Outfit",
+                        fontStyle: FontStyle.normal,
+                        fontSize: 9.0),
+                  )
+                ],
+                       ),
+             ),
+           ),
+          // SizedBox(
+          //   width: MediaQuery.of(context).size.width*0.27,
+          // ),
+          const Spacer(),
           Container(
-            width: 118,
-            height: 50,
-            padding: const EdgeInsets.only(
-              left: 18,
-              top: 7,
-              right: 3,
-              bottom: 5,
+            width: //110,
+            MediaQuery.of(context).size.width*0.32,
+            height: //50,
+            MediaQuery.of(context).size.height*0.16,
+            padding:  EdgeInsets.only(
+              left: MediaQuery.of(context).size.width*0.05,
+              top: MediaQuery.of(context).size.height*0.01,
+              right: MediaQuery.of(context).size.width*0.01,
+              bottom: MediaQuery.of(context).size.height*0.01,
             ),
+            margin: EdgeInsets.only(right: MediaQuery.of(context).size.width*0.04),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: const Color.fromARGB(255, 215, 243, 239),
@@ -73,8 +81,8 @@ class BottomBar extends StatelessWidget {
                       fontStyle: FontStyle.normal,
                       fontSize: 12.0),
                 ),
-                const SizedBox(
-                  width: 10,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width*0.03,
                 ),
                 Image.asset('assets/group_1482.png'),
               ],
