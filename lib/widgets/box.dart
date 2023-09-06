@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 
 class Box extends StatelessWidget {
   Box({super.key, required this.text, required this.image});
-
+  
   String text;
   var image;
   @override
   Widget build(BuildContext context) {
+    var _ksize = MediaQuery.of(context).size;
     return Row(
       children: [
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: EdgeInsets.only(top: _ksize.height*0.01,bottom: _ksize.height*0.01,left: _ksize.width*0.02,right: _ksize.width*0.02),
           decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: Colors.black),
@@ -19,8 +20,8 @@ class Box extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(image),
-              const SizedBox(
-                width: 8,
+              SizedBox(
+                width: _ksize.width*0.01,
               ),
               Text(
                 text,

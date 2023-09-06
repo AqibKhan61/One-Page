@@ -4,13 +4,14 @@ class BottomBar extends StatelessWidget {
   const BottomBar({super.key});
   @override
   Widget build(BuildContext context) {
+    var _ksize = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height*0.10,
+      height: _ksize.height*0.10,
       padding: EdgeInsets.only(
-        top: MediaQuery.of(context).size.height*0.02,
-        bottom: MediaQuery.of(context).size.height*0.03,
-         left: MediaQuery.of(context).size.width*0.05,
+        top: _ksize.height*0.02,
+        bottom: _ksize.height*0.03,
+         left: _ksize.width*0.05,
         // right: MediaQuery.of(context).size.width*0.05,
       ),
       decoration: BoxDecoration(
@@ -20,9 +21,9 @@ class BottomBar extends StatelessWidget {
       child: Row(
         children: [
            Padding(
-             padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.height*0.001),
+             padding: EdgeInsets.only(bottom: _ksize.height*0.001),
              child: Padding(
-               padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.001,bottom:MediaQuery.of(context).size.height*0.001 ),
+               padding: EdgeInsets.only(top: _ksize.height*0.001,bottom:_ksize.height*0.001 ),
                child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -56,16 +57,16 @@ class BottomBar extends StatelessWidget {
           const Spacer(),
           Container(
             width: //110,
-            MediaQuery.of(context).size.width*0.32,
+            _ksize.width*0.32,
             height: //50,
-            MediaQuery.of(context).size.height*0.16,
+            _ksize.height*0.20,
             padding:  EdgeInsets.only(
-              left: MediaQuery.of(context).size.width*0.05,
-              top: MediaQuery.of(context).size.height*0.01,
-              right: MediaQuery.of(context).size.width*0.01,
-              bottom: MediaQuery.of(context).size.height*0.01,
+              left: _ksize.width*0.05,
+              top:_ksize.height*0.01,
+              right: _ksize.width*0.01,
+              bottom: _ksize.height*0.01,
             ),
-            margin: EdgeInsets.only(right: MediaQuery.of(context).size.width*0.04),
+            margin: EdgeInsets.only(right: _ksize.width*0.04),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: const Color.fromARGB(255, 215, 243, 239),
@@ -82,7 +83,7 @@ class BottomBar extends StatelessWidget {
                       fontSize: 12.0),
                 ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width*0.03,
+                  width: _ksize.width*0.03,
                 ),
                 Image.asset('assets/group_1482.png'),
               ],
