@@ -45,12 +45,13 @@ class ListItem extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          height: 10,
+          height: 8,
         ),
         const Divider(
           thickness: 1,
-          color: Colors.blueAccent,
+          color: Color(0xff797979),
         ),
+        
       ],
     );
   }

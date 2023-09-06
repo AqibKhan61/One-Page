@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <linearGradient id="p8p0qfzzua" x1=".836" y1="1" x2=".171" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#4062f5"/>
+            <stop offset="1" stop-color="#a7c1ff"/>
+        </linearGradient>
+    </defs>
+    <g data-name="Group 1482" transform="translate(-1957 -976)">
+        <rect data-name="Rectangle 75" width="44" height="44" rx="22" transform="translate(1957 976)" style="fill:url(#p8p0qfzzua)"/>
+        <g data-name="Evento Icons">
+            <path d="M0 0h18.46v18.46H0z" style="fill:none" transform="translate(1970 989)"/>
+            <g data-name="Group 1266">
+                <path data-name="Path 2099" d="m-1025.415-603.458 5.892-7.458-.041-.046c-.077.066-.156.128-.229.2q-3.417 3.269-6.828 6.545a.5.5 0 0 1-.607.13q-1.812-.657-3.637-1.28a.965.965 0 0 1-.762-.864.96.96 0 0 1 .6-.951q6.526-3.5 13.046-7.014a.934.934 0 0 1 1.083 0 .973.973 0 0 1 .341 1.019q-.761 5.078-1.506 10.159c-.048.322-.086.646-.147.965a.847.847 0 0 1-1.1.723c-2.023-.687-4.038-1.405-6.105-2.128z" transform="translate(3002.48 1604.458)" style="fill:#fff"/>
+                <path data-name="Path 2100" d="M-948.1-445.072c-.565.5-1.085.965-1.611 1.422a.668.668 0 0 1-.736.1.651.651 0 0 1-.425-.609c-.015-.61 0-1.221 0-1.867z" transform="translate(2927.378 1447.854)" style="fill:#fff"/>
+            </g>
+        </g>
+    </g>
+</svg>

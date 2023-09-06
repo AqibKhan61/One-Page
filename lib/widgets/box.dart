@@ -1,8 +1,9 @@
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 
 class Box extends StatelessWidget {
   Box({super.key, required this.text, required this.image});
-  
+
   String text;
   var image;
   @override
@@ -11,17 +12,22 @@ class Box extends StatelessWidget {
     return Row(
       children: [
         Container(
-          padding: EdgeInsets.only(top: _ksize.height*0.01,bottom: _ksize.height*0.01,left: _ksize.width*0.02,right: _ksize.width*0.02),
+          padding: EdgeInsets.only(
+              top: _ksize.height * 0.01,
+              bottom: _ksize.height * 0.01,
+              left: _ksize.width * 0.02,
+              right: _ksize.width * 0.02),
+          // margin: EdgeInsets.only(bottom: _ksize.height*0.01),
           decoration: BoxDecoration(
               color: Colors.white,
-              border: Border.all(color: Colors.black),
+              border: Border.all(color: const Color(0xff797979)),
               borderRadius: BorderRadius.circular(30)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(image),
+             SvgPicture.asset(image,fit: BoxFit.scaleDown,),
               SizedBox(
-                width: _ksize.width*0.01,
+                width: _ksize.width * 0.01,
               ),
               Text(
                 text,

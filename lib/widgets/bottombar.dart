@@ -7,7 +7,7 @@ class BottomBar extends StatelessWidget {
     var _ksize = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
-      height: _ksize.height*0.10,
+      height: _ksize.height*0.12,
       padding: EdgeInsets.only(
         top: _ksize.height*0.02,
         bottom: _ksize.height*0.03,
@@ -34,7 +34,7 @@ class BottomBar extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                       fontFamily: "Outfit",
                       fontStyle: FontStyle.normal,
-                      fontSize: 11.0,
+                      fontSize: 15.0,
                     ),
                   ),
                   //SizedBox(height: MediaQuery.of(context).size.height*0.001,),
@@ -59,14 +59,14 @@ class BottomBar extends StatelessWidget {
             width: //110,
             _ksize.width*0.32,
             height: //50,
-            _ksize.height*0.20,
+            _ksize.height*0.30,
             padding:  EdgeInsets.only(
-              left: _ksize.width*0.05,
+              left: _ksize.width*0.03,
               top:_ksize.height*0.01,
               right: _ksize.width*0.01,
               bottom: _ksize.height*0.01,
             ),
-            margin: EdgeInsets.only(right: _ksize.width*0.04),
+            margin: EdgeInsets.only(right: _ksize.width*0.08),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: const Color.fromARGB(255, 215, 243, 239),
@@ -83,7 +83,7 @@ class BottomBar extends StatelessWidget {
                       fontSize: 12.0),
                 ),
                 SizedBox(
-                  width: _ksize.width*0.03,
+                  width: _ksize.width*0.01,
                 ),
                 Image.asset('assets/group_1482.png'),
               ],
